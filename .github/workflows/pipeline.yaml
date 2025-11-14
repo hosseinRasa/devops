@@ -1,0 +1,24 @@
+name: RASA CI
+
+on:
+  push:
+    branches : [ main ]
+jobs:
+    build:
+      runs-on: ubunto@latest
+      steps: 
+        - name: CHECKOUT 
+          uses: actions/checkout@latest
+
+        - name: SETUP NODEJS
+          uses: actions/setup-node@latest
+
+        - name: INSTALL DEPENDENCIES
+          run: npm install
+        
+        - name: RUN
+          run: node hello.js
+
+        - name: TEST
+          run: node test.js
+          
