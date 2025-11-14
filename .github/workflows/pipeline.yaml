@@ -12,6 +12,8 @@ jobs:
 
         - name: SETUP NODEJS
           uses: actions/setup-node@v4
+          with:
+            node-version: 25
 
         - name: INSTALL DEPENDENCIES
           run: npm install
