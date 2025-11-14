@@ -5,13 +5,13 @@ on:
     branches : [ main ]
 jobs:
     build:
-      runs-on: ubunto@latest
+      runs-on: ubuntu-latest
       steps: 
         - name: CHECKOUT 
-          uses: actions/checkout@latest
+          uses: actions/checkout@4
 
         - name: SETUP NODEJS
-          uses: actions/setup-node@latest
+          uses: actions/setup-node@4
 
         - name: INSTALL DEPENDENCIES
           run: npm install
@@ -21,4 +21,3 @@ jobs:
 
         - name: TEST
           run: node test.js
-          
